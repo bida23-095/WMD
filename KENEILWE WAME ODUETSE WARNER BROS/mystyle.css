@@ -1,0 +1,154 @@
+/* Header */
+header {
+    height: fit-content;
+    background-color: #e43131; /* Green */
+}
+
+/* Header text */
+
+/* Animation for h1 */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+h1 {
+    color: #d81535; 
+    text-align: center;
+    animation: slideIn 1s ease-out forwards;
+    animation-delay: 0.9s;
+}
+
+/* Paragraph */
+p {
+    text-align: center;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e43131; /* Dark gray */
+    color: #fff; /* White */
+    padding: 10px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 5px;
+    color: #fff; /* White */
+}
+
+/* Content Cards */
+.all {
+    text-align: center;
+}
+
+.cards {
+    width: 32vh;
+    margin: 40px;
+    display: inline-block;
+}
+
+.image img {
+    width: 100%;
+    height: 15vw;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: #000; /* Black */
+}
+
+.title h2 {
+    color: #d8871e; 
+}
+
+.content {
+    text-align: center;
+    padding: 4px;
+}
+
+button {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: #ecc9032f;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+button:hover {
+    background-color: #f0b20960; 
+    transition: .5s;
+    cursor: pointer;
+}
+
+/* Animation for flipping cards */
+@keyframes flip {
+    0% {
+        transform: perspective(400px) rotateY(0);
+    }
+    100% {
+        transform: perspective(400px) rotateY(180deg);
+    }
+}
+
+/* Apply flip animation to card on hover */
+.cards {
+    perspective: 1000px; /* Set perspective */
+}
+
+.cards .image {
+    position: relative;
+    width: 100%;
+    height: 15vw;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.cards:hover .image {
+    animation: flip 0.5s;
+}
+
+
+/* Footer */
+footer {
+    background-color: #e43131; /* Dark gray */
+    color: #fff; /* White */
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 0;
+}
